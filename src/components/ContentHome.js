@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios'
-import {Box, Grid, Card, CardContent, Typography} from '@material-ui/core'
-import {Link} from 'react-router-dom';
+import {Box, Grid, Card, CardContent, Typography, Link} from '@material-ui/core'
+import {Link as RouterLink} from 'react-router-dom';
 
 function ContentHome() {
 	const [data, setData] = useState ([])
@@ -22,7 +22,7 @@ function ContentHome() {
 			 	  <CardContent>
 			 		<Typography variant='body1'>Surat {item.nama}</Typography>
 			 		<Typography variant='body2' color='textSecondary' style={{marginBottom:'15px'}}>{item.asma}</Typography>
-					<Link to={`/ayat/${item.nomor}`} color='secondary' underline='hover'>Baca</Link>
+					<Link to={`/ayat/${item.nomor}`} color='secondary' component={RouterLink}>Baca</Link>
 			 	  </CardContent>
 			 	 </Card>
 			 	</Box>
