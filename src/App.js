@@ -1,11 +1,11 @@
 import {useState} from 'react'
 import Navbar from './components/Navbar';
 import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
-import {Paper, Button} from '@material-ui/core'
+import {Paper} from '@material-ui/core'
 import ContentHome from './components/ContentHome';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import AyatComponent from './components/AyatComponent';
-import {createContext, useContext} from 'react';
+import {createContext} from 'react';
 
 export const ThemeContext = createContext(true)
 
