@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import {Grid, Box, Card, CardContent, Typography} from '@material-ui/core';
+import {Grid, Box, Card, CardContent, Typography, Paper} from '@material-ui/core';
 import axios from 'axios';
 
 function AyatComponent(props) {
@@ -12,9 +12,10 @@ function AyatComponent(props) {
 		})
 	}, [props.match.params.id])
 	return (
-		<Grid container style={{marginTop:'5em'}}>
+	  <Paper style={{height: "100%"}} elevation={0}>
+		<Grid container style={{paddingTop:'5em'}}>
 			{data.map((item, index) => (
-				 <Grid item xs={12}>
+				 <Grid item xs={12} style={{padding:'15px'}}>
 				 <Box mt={4} height='25%'>
 				  <Card variant='outlined'>
 				   <CardContent>
@@ -26,6 +27,7 @@ function AyatComponent(props) {
 				 </Grid>
 			))}
 		</Grid>
+	  </Paper>
 	)
 }
 

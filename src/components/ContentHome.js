@@ -14,9 +14,9 @@ function ContentHome() {
 	}, [])
 	
 	return (
-		<Grid container spacing={4} style={{marginTop:'5em'}}>
+		<Grid container style={{paddingTop:'5em'}}>
 		{data.map((item, index) => (
-			 <Grid item style={{marginTop:'12px'}} xs={12} sm={2} md={3}>
+			 <Grid item style={{paddingTop:'12px', padding: '15px'}} xs={12} sm={2} md={3}>
 				<Box height='25%'>
 			 	 <Card variant='outlined'>
 			 	  <CardContent>
